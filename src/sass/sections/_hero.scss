@@ -4,16 +4,18 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
+  position: relative;
+  overflow: hidden;
+  background: $dark-blue-text;
   font-weight: 400;
-  color: $dark-blue-text;
+  color: $white-color;
   padding: 0rem 5.6rem;
   margin-bottom: 0;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 
   // Set position sticky so the jumbotron stays fixed while you scroll.
   // position: sticky;
@@ -26,6 +28,48 @@
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
+  }
+
+  // Photo collage: a 3 x 2 grid of photos filling the whole first screen,
+  // with a dark layer on top so the white text stays readable.
+  .hero-collage {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(20, 18, 36, 0.88) 0%,
+        rgba(20, 18, 36, 0.6) 100%
+      );
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      &::after {
+        background: rgba(20, 18, 36, 0.75);
+      }
+    }
+  }
+
+  .container {
+    position: relative;
   }
 
   .hero-title {
