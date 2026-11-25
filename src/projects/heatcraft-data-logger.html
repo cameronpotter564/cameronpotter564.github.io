@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+  HOW TO EDIT THIS PAGE
+  - Change any text between the tags below. Keep the <p>, <li> and <h2> tags.
+  - To add a bullet point, copy a whole <li>...</li> line.
+  - To swap the big photo, upload a new image to src/assets/projects/ and
+    change the file name in the <img class="project-page__cover"> line.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
+    <title>Controller Data Logger | Cameron Potter</title>
+    <meta name="description" content="An 8-channel data logger I&rsquo;m building to figure out how an undocumented controller decides when to switch fans and compressors on and off." />
+    <link rel="stylesheet" href="../project-page.scss" />
+  </head>
+  <body>
+    <main class="project-page">
+      <a class="project-page__back" href="../index.html#projects">&larr; All projects</a>
+
+      <div class="project-page__tags">
+        <span>Instrumentation</span>
+        <span>Data logging</span>
+        <span>Reverse engineering</span>
+        <span class="status">In progress</span>
+      </div>
+      <h1>Controller Data Logger</h1>
+      <p class="project-page__summary">
+        An 8-channel data logger I&rsquo;m building to figure out how an undocumented controller decides when to switch fans and compressors on and off.
+      </p>
+
+      <dl class="project-page__facts">
+        <div><dt>When</dt><dd>2026 &ndash; present</dd></div>
+        <div><dt>My role</dt><dd>Engineering intern, Heatcraft</dd></div>
+        <div><dt>Tools</dt><dd>Relay, temperature and pressure sensing</dd></div>
+      </dl>
+
+      <img
+        class="project-page__cover"
+        src="../assets/projects/heatcraft-data-logger-card.jpg"
+        alt="Placeholder cover for the controller data logger project"
+      />
+
+      <h2>Overview</h2>
+      <p>
+        A third-party controller runs the fans and compressor on a refrigeration system, but its switching logic isn&rsquo;t documented and the source code isn&rsquo;t available. To understand it, I&rsquo;m building a logger that records what the controller does alongside what the system is doing.
+      </p>
+      <h2>What I&rsquo;m doing</h2>
+      <ul>
+        <li>Building an 8-channel logger that records relay states, temperatures and pressures with timestamps.</li>
+        <li>Lining up when each fan and compressor switches against the process data, to work out the rules the controller follows.</li>
+      </ul>
+      <h2>Status</h2>
+      <p>
+        In progress. I&rsquo;ll add results and photos as the project moves forward.
+      </p>
+      <!-- PHOTOS: to add more photos, upload them to src/assets/projects/ and
+           add a line like this inside the gallery below:
+           <img src="../assets/projects/my-photo.jpg" alt="What the photo shows" />
+      <h2>Photos</h2>
+      <div class="project-page__gallery">
+      </div>
+      -->
+
+      <div class="project-page__footer">
+        <a class="project-page__back" href="../index.html#projects">&larr; Back to all projects</a>
+      </div>
+    </main>
+  </body>
+</html>

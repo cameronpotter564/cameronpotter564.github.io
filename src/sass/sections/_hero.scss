@@ -24,8 +24,52 @@
   background-position: center;
   background-size: cover; */
 
+  @include respond(tab-port) {
+    height: auto;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   @include respond(phone) {
-    padding: 0rem $default-font-size;
+    padding: 8rem $default-font-size;
+  }
+
+  // Intro text on the left, HyTech car photo on the right.
+  // On tablets and phones the photo moves below the text.
+  .hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+  }
+
+  .hero-text {
+    flex: 1 1 60%;
+  }
+
+  .hero-image {
+    flex: 0 1 36%;
+
+    img {
+      display: block;
+      width: 100%;
+      max-height: 72vh;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      box-shadow: 0 2rem 4rem rgba(39, 35, 65, 0.18);
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+
+      img {
+        max-height: 40vh;
+      }
+    }
   }
 
   .hero-title {
@@ -33,6 +77,11 @@
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: left;
+
+    // Keep first and last name together on one line.
+    .text-color-main {
+      white-space: nowrap;
+    }
 
     @include respond(tab-land) {
       font-size: 4rem;

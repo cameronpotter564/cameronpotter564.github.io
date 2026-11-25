@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+  HOW TO EDIT THIS PAGE
+  - Change any text between the tags below. Keep the <p>, <li> and <h2> tags.
+  - To add a bullet point, copy a whole <li>...</li> line.
+  - To swap the big photo, upload a new image to src/assets/projects/ and
+    change the file name in the <img class="project-page__cover"> line.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
+    <title>ME 2110 Competition Robot | Cameron Potter</title>
+    <meta name="description" content="A team-built competition robot for Georgia Tech ME 2110. I wrote the firmware that sequences its drive, flap and lift, and we placed 3rd of 9 teams." />
+    <link rel="stylesheet" href="../project-page.scss" />
+  </head>
+  <body>
+    <main class="project-page">
+      <a class="project-page__back" href="../index.html#projects">&larr; All projects</a>
+
+      <div class="project-page__tags">
+        <span>Embedded C++</span>
+        <span>Mechatronics</span>
+        <span>Team project</span>
+      </div>
+      <h1>ME 2110 Competition Robot</h1>
+      <p class="project-page__summary">
+        A team-built competition robot for Georgia Tech ME 2110. I wrote the firmware that sequences its drive, flap and lift, and we placed 3rd of 9 teams.
+      </p>
+
+      <dl class="project-page__facts">
+        <div><dt>When</dt><dd>Georgia Tech, ME 2110</dd></div>
+        <div><dt>My role</dt><dd>Firmware and controls</dd></div>
+        <div><dt>Tools</dt><dd>C++, Teensy, ultrasonic sensors, solenoids</dd></div>
+      </dl>
+
+      <img
+        class="project-page__cover"
+        src="../assets/projects/me2110-robot.jpg"
+        alt="The ME 2110 competition robot on a workbench in the Georgia Tech shop"
+      />
+
+      <h2>Overview</h2>
+      <p>
+        In ME 2110, teams design and build a robot that has to complete a set of tasks on its own during a timed head-to-head competition. Our robot, "The Big One," drives into position, deploys a flap and lifts game pieces with a tall tower.
+      </p>
+      <h2>What I did</h2>
+      <ul>
+        <li>Wrote C++ firmware on a Teensy microcontroller using a non-blocking state machine, so the robot could sequence drive, flap deployment and lift without one step freezing the others.</li>
+        <li>Tracked down solenoid mistiming and a ring-buffer seeding fault that were causing unreliable triggers.</li>
+        <li>Added ultrasonic sensor averaging and edge detection so the robot reacted to real events instead of noisy readings.</li>
+      </ul>
+      <h2>Result</h2>
+      <p>
+        Placed 3rd of 9 teams in our section&rsquo;s round-robin competition.
+      </p>
+      <!-- PHOTOS: to add more photos, upload them to src/assets/projects/ and
+           add a line like this inside the gallery below:
+           <img src="../assets/projects/my-photo.jpg" alt="What the photo shows" />
+      <h2>Photos</h2>
+      <div class="project-page__gallery">
+      </div>
+      -->
+
+      <div class="project-page__footer">
+        <a class="project-page__back" href="../index.html#projects">&larr; Back to all projects</a>
+      </div>
+    </main>
+  </body>
+</html>
