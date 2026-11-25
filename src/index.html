@@ -116,86 +116,21 @@
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Projects</h2>
 
-          <!-- Project: ME 2110 Competition Robot. Its full page is src/projects/me-2110-robot.html -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">ME 2110 Competition Robot</h3>
-                <div>
-                  <p class="mb-4">
-                    A team-built competition robot for Georgia Tech ME 2110. I wrote the C++ firmware that sequences its drive, flap and lift, and we placed 3rd of 9 teams.
-                  </p>
-                </div>
-                <a class="cta-btn cta-btn--hero" href="projects/me-2110-robot.html">
-                  Read more
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a href="projects/me-2110-robot.html">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="The ME 2110 competition robot"
-                      class="img-fluid"
-                      src="assets/projects/me2110-robot-card.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+          <!--
+            TO REORDER PROJECTS: each project below sits between a START line
+            and an END line. Select everything from START to END (including
+            both lines), cut it, and paste it where you want it to appear.
+            Projects show on the page top to bottom in this order.
+          -->
 
-          <!-- Project: Controller Data Logger. Its full page is src/projects/heatcraft-data-logger.html -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Controller Data Logger</h3>
-                <div>
-                  <p class="mb-4">
-                    An 8-channel data logger I&rsquo;m building at Heatcraft to figure out how an undocumented controller decides when to switch fans and compressors on and off.
-                  </p>
-                </div>
-                <a class="cta-btn cta-btn--hero" href="projects/heatcraft-data-logger.html">
-                  Read more
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a href="projects/heatcraft-data-logger.html">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Controller data logger project"
-                      class="img-fluid"
-                      src="assets/projects/heatcraft-data-logger-card.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project: Torsional Rigidity Jig. Its full page is src/projects/trj.html -->
+          <!-- ===== START project: Torsional Rigidity Jig (full page: src/projects/trj.html) ===== -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
                 <h3 class="project-wrapper__text-title">Torsional Rigidity Jig</h3>
                 <div>
                   <p class="mb-4">
-                    A test jig for measuring the torsional rigidity of HyTech Racing&rsquo;s Formula SAE monocoque. [One more sentence about your part in it.]
+                    A test jig that twists a Formula SAE chassis to measure its stiffness and check it against our simulations. Now being redesigned for HyTech&rsquo;s first monocoque.
                   </p>
                 </div>
                 <a class="cta-btn cta-btn--hero" href="projects/trj.html">
@@ -223,15 +158,90 @@
               </div>
             </div>
           </div>
+          <!-- ===== END project: Torsional Rigidity Jig ===== -->
 
-          <!-- Project: Stream Deck. Its full page is src/projects/stream-deck.html -->
+          <!-- ===== START project: Controller Data Logger (full page: src/projects/heatcraft-data-logger.html) ===== -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Controller Data Logger</h3>
+                <div>
+                  <p class="mb-4">
+                    An Arduino-based logger with two custom breakout boards that records a unit controller&rsquo;s relay and analog signals. The data tuned the unit&rsquo;s cycles, measured its water use, and shaped new control logic.
+                  </p>
+                </div>
+                <a class="cta-btn cta-btn--hero" href="projects/heatcraft-data-logger.html">
+                  Read more
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a href="projects/heatcraft-data-logger.html">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Controller data logger project"
+                      class="img-fluid"
+                      src="assets/projects/heatcraft-data-logger-card.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ===== END project: Controller Data Logger ===== -->
+
+          <!-- ===== START project: ME 2110 Competition Robot (full page: src/projects/me-2110-robot.html) ===== -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">ME 2110 Competition Robot</h3>
+                <div>
+                  <p class="mb-4">
+                    Lead designer on a team competition robot for Georgia Tech ME 2110. I came up with the core design, designed and built the lift mechanism, and wrote the firmware. We placed 3rd of 9 teams.
+                  </p>
+                </div>
+                <a class="cta-btn cta-btn--hero" href="projects/me-2110-robot.html">
+                  Read more
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a href="projects/me-2110-robot.html">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="The ME 2110 competition robot"
+                      class="img-fluid"
+                      src="assets/projects/me2110-robot-card.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ===== END project: ME 2110 Competition Robot ===== -->
+
+          <!-- ===== START project: Stream Deck (full page: src/projects/stream-deck.html) ===== -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
                 <h3 class="project-wrapper__text-title">Stream Deck</h3>
                 <div>
                   <p class="mb-4">
-                    [One or two sentences about your Stream Deck project.] In progress.
+                    A custom macro keypad I&rsquo;m designing from scratch, from the circuit board in Altium to the app that assigns its buttons. In progress.
                   </p>
                 </div>
                 <a class="cta-btn cta-btn--hero" href="projects/stream-deck.html">
@@ -259,6 +269,7 @@
               </div>
             </div>
           </div>
+          <!-- ===== END project: Stream Deck ===== -->
         </div>
       </div>
     </section>

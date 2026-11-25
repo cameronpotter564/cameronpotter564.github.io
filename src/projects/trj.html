@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
     <title>Torsional Rigidity Jig | Cameron Potter</title>
-    <meta name="description" content="A test jig for measuring the torsional rigidity of HyTech Racing&rsquo;s Formula SAE monocoque. [One more sentence: what you did on it.]" />
+    <meta name="description" content="A torsional rigidity test jig for HyTech Racing Formula SAE chassis." />
     <link rel="stylesheet" href="../project-page.scss" />
   </head>
   <body>
@@ -21,17 +21,19 @@
 
       <div class="project-page__tags">
         <span>Test fixture design</span>
+        <span>Validation testing</span>
         <span>Formula SAE</span>
+        <span class="status">Redesign in progress</span>
       </div>
       <h1>Torsional Rigidity Jig</h1>
       <p class="project-page__summary">
-        A test jig for measuring the torsional rigidity of HyTech Racing&rsquo;s Formula SAE monocoque. [One more sentence: what you did on it.]
+        A test jig that twists a Formula SAE chassis to measure its torsional stiffness, so we can check our simulations against the real car.
       </p>
 
       <dl class="project-page__facts">
-        <div><dt>When</dt><dd>[When]</dd></div>
-        <div><dt>My role</dt><dd>[Your role], HyTech Racing</dd></div>
-        <div><dt>Tools</dt><dd>[Tools you used]</dd></div>
+        <div><dt>When</dt><dd>Spring 2026</dd></div>
+        <div><dt>My role</dt><dd>Design and build, HyTech Racing</dd></div>
+        <div><dt>Tools</dt><dd>CATIA V6, TIG welding</dd></div>
       </dl>
 
       <img
@@ -40,19 +42,22 @@
         alt="Placeholder cover for the torsional rigidity jig project"
       />
 
-      <h2>Overview</h2>
+      <h2>Why it matters</h2>
       <p>
-        [What the project is and why it mattered.]
+        A chassis that flexes too much changes how the suspension behaves, which hurts the car&rsquo;s handling. We predict chassis stiffness in simulation, and this jig lets us measure it on the real frame to make sure those predictions hold up.
       </p>
-      <h2>What I did</h2>
+      <h2>How the first version worked</h2>
       <ul>
-        <li>[Something you did]</li>
-        <li>[Something you did]</li>
-        <li>[Something you did]</li>
+        <li>Designed and built the jig for HTX, HyTech&rsquo;s steel tube space frame car.</li>
+        <li>Both rear wheels were locked to the ground, and both front wheels were mounted to a beam that rotates about the chassis centerline. Twisting the beam applies a known torque, so we can measure how much the frame twists.</li>
       </ul>
-      <h2>Result</h2>
+      <h2>Results</h2>
       <p>
-        [How it turned out: numbers, competition results or what you learned.]
+        The measured stiffness came out very close to our simulated value, which gave the team confidence in the chassis model.
+      </p>
+      <h2>What we learned and what&rsquo;s next</h2>
+      <p>
+        During our design review, the competition judges pointed out that the setup was heavily overconstrained, which can make the chassis look stiffer than it really is. For HT11, HyTech&rsquo;s first monocoque, I&rsquo;m redesigning the jig to fix this. That work is in progress.
       </p>
       <!-- PHOTOS: to add more photos, upload them to src/assets/projects/ and
            add a line like this inside the gallery below:

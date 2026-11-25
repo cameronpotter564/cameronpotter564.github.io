@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
     <title>ME 2110 Competition Robot | Cameron Potter</title>
-    <meta name="description" content="A team-built competition robot for Georgia Tech ME 2110. I wrote the firmware that sequences its drive, flap and lift, and we placed 3rd of 9 teams." />
+    <meta name="description" content="A team-built competition robot for Georgia Tech ME 2110." />
     <link rel="stylesheet" href="../project-page.scss" />
   </head>
   <body>
@@ -20,19 +20,20 @@
       <a class="project-page__back" href="../index.html#projects">&larr; All projects</a>
 
       <div class="project-page__tags">
+        <span>Mechanical design</span>
         <span>Embedded C++</span>
         <span>Mechatronics</span>
         <span>Team project</span>
       </div>
       <h1>ME 2110 Competition Robot</h1>
       <p class="project-page__summary">
-        A team-built competition robot for Georgia Tech ME 2110. I wrote the firmware that sequences its drive, flap and lift, and we placed 3rd of 9 teams.
+        Lead designer on a team-built competition robot for Georgia Tech ME 2110. I came up with the major ideas behind the design, designed and built the lift mechanism, and wrote the firmware. We placed 3rd of 9 teams.
       </p>
 
       <dl class="project-page__facts">
-        <div><dt>When</dt><dd>Georgia Tech, ME 2110</dd></div>
-        <div><dt>My role</dt><dd>Firmware and controls</dd></div>
-        <div><dt>Tools</dt><dd>C++, Teensy, ultrasonic sensors, solenoids</dd></div>
+        <div><dt>When</dt><dd>Summer 2026</dd></div>
+        <div><dt>My role</dt><dd>Lead designer</dd></div>
+        <div><dt>Tools</dt><dd>SolidWorks, C++, Teensy</dd></div>
       </dl>
 
       <img
@@ -47,10 +48,12 @@
       </p>
       <h2>What I did</h2>
       <ul>
+        <li>Came up with the major ideas behind the robot&rsquo;s overall design as the team&rsquo;s lead designer, modeling it in SolidWorks.</li>
+        <li>Designed and built the lift mechanism.</li>
         <li>Wrote C++ firmware on a Teensy microcontroller using a non-blocking state machine, so the robot could sequence drive, flap deployment and lift without one step freezing the others.</li>
-        <li>Tracked down solenoid mistiming and a ring-buffer seeding fault that were causing unreliable triggers.</li>
-        <li>Added ultrasonic sensor averaging and edge detection so the robot reacted to real events instead of noisy readings.</li>
+        <li>Tracked down solenoid mistiming and a ring-buffer seeding fault that were causing unreliable triggers, and added ultrasonic sensor averaging and edge detection so the robot reacted to real events instead of noisy readings.</li>
       </ul>
+      <!-- TODO: add a "Lift mechanism" section here with a deeper write-up. -->
       <h2>Result</h2>
       <p>
         Placed 3rd of 9 teams in our section&rsquo;s round-robin competition.
