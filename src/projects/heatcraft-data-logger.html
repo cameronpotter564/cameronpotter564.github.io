@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
     <title>Controller Data Logger | Cameron Potter</title>
-    <meta name="description" content="An 8-channel data logger I&rsquo;m building to figure out how an undocumented controller decides when to switch fans and compressors on and off." />
+    <meta name="description" content="An Arduino data logger for tuning and diagnosing a third-party AGC unit controller." />
     <link rel="stylesheet" href="../project-page.scss" />
   </head>
   <body>
@@ -20,20 +20,19 @@
       <a class="project-page__back" href="../index.html#projects">&larr; All projects</a>
 
       <div class="project-page__tags">
-        <span>Instrumentation</span>
-        <span>Data logging</span>
-        <span>Reverse engineering</span>
-        <span class="status">In progress</span>
+        <span>Circuit design</span>
+        <span>Embedded software</span>
+        <span>Data analysis</span>
       </div>
       <h1>Controller Data Logger</h1>
       <p class="project-page__summary">
-        An 8-channel data logger I&rsquo;m building to figure out how an undocumented controller decides when to switch fans and compressors on and off.
+        An Arduino-based logger that records relay and analog signals from a third-party unit controller. We used the data to tune the unit&rsquo;s cycles, calculate its water use, diagnose field issues, and design better control logic.
       </p>
 
       <dl class="project-page__facts">
-        <div><dt>When</dt><dd>2026 &ndash; present</dd></div>
+        <div><dt>When</dt><dd>2026</dd></div>
         <div><dt>My role</dt><dd>Engineering intern, Heatcraft</dd></div>
-        <div><dt>Tools</dt><dd>Relay, temperature and pressure sensing</dd></div>
+        <div><dt>Tools</dt><dd>Arduino, custom breakout boards, Excel</dd></div>
       </dl>
 
       <img
@@ -44,17 +43,21 @@
 
       <h2>Overview</h2>
       <p>
-        A third-party controller runs the fans and compressor on a refrigeration system, but its switching logic isn&rsquo;t documented and the source code isn&rsquo;t available. To understand it, I&rsquo;m building a logger that records what the controller does alongside what the system is doing.
+        Our AGC units run on a third-party controller that we wanted to understand better, and eventually reprogram, to make the units less finicky. I built a logger that records what the controller is doing so we could see exactly how each cycle behaves.
       </p>
-      <h2>What I&rsquo;m doing</h2>
+      <h2>What I built</h2>
       <ul>
-        <li>Building an 8-channel logger that records relay states, temperatures and pressures with timestamps.</li>
-        <li>Lining up when each fan and compressor switches against the process data, to work out the rules the controller follows.</li>
+        <li>Two breakout boards to convert the controller&rsquo;s signals into something an Arduino can read safely: an 8-channel 24&nbsp;VAC to 5&nbsp;VDC board for the relay outputs, and an analog voltage divider that scales 0&ndash;10&nbsp;VDC down to 0&ndash;4.55&nbsp;VDC.</li>
+        <li>Arduino code that reads every channel, timestamps the data and writes it to CSV files to pull off later.</li>
+        <li>Custom Excel workbooks that load the CSV files and turn the raw data into charts and numbers that are easy to interpret.</li>
       </ul>
-      <h2>Status</h2>
-      <p>
-        In progress. I&rsquo;ll add results and photos as the project moves forward.
-      </p>
+      <h2>How we used the data</h2>
+      <ul>
+        <li>Fine-tuned the different cycles the unit runs through.</li>
+        <li>Calculated the unit&rsquo;s water consumption by combining mass flow rate testing with how long the unit spends filling.</li>
+        <li>Diagnosed field issues with these controllers.</li>
+        <li>Designed new, more efficient controller logic for future implementation.</li>
+      </ul>
       <!-- PHOTOS: to add more photos, upload them to src/assets/projects/ and
            add a line like this inside the gallery below:
            <img src="../assets/projects/my-photo.jpg" alt="What the photo shows" />
